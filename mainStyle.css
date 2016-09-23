@@ -1,0 +1,47 @@
+table td, table th {
+    padding: 7px;
+}
+table tr:nth-child(odd) {
+    background-color: lightgrey;
+    padding: 7px;
+}
+table tr:nth-child(even) {
+    background-color: lightblue;
+    padding: 7px;
+}
+input[type="text"] {
+    min-width: 186;
+    background-color: white;
+    border: none;
+    padding: 2px;
+}
+input[type="checkbox"] {
+    background-color: white;
+    border: none;
+}
+.tb-hd {
+    min-width: 200px;
+}
+#btn-del {
+    background-color: white;
+    border: none;
+    color: red;
+}
+#btn-del:hover {
+    background-color: red;
+    border: none;
+    color: white;
+}
+#btn-add {
+    background-color: white;
+    border: none;
+    color: green;
+}
+#btn-add:hover {
+    background-color: green;
+    border: none;
+    color: white;
+}
+h3 {
+    color: grey;
+}

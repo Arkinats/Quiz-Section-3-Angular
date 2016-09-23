@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="mainStyle.css">
+    </head>
+    <body ng-controller="quizCtrl">
+        <h1>Build Your Family Tree</h1>
+        <table>
+            <tr>
+                <th><button id="btn-del" ng-click="deleteSelected()" ng-mouseenter="delHintShow()" ng-mouseleave="delHintHide()">X</button></th>
+                <th class="tb-hd">Individual</th>
+                <th class="tb-hd">Father</th>
+                <th class="tb-hd">Mother</th>
+            </tr>
+            <tr ng-repeat="x in people">
+                <td><input type="checkbox" ng-model="x.flagged"></td>
+                <td>{{x.person}}</td>
+                <td>{{x.father}}</td>
+                <td>{{x.mother}}</td>
+            </tr>
+            <tr>
+                <td><button id="btn-add" ng-click="addPerson()" ng-mouseenter="addHintShow()" ng-mouseleave="addHintHide()">+</button></td>
+                <td><input type="text" ng-model="person" placeholder="Individual's Full Name"></td>
+                <td><input type="text" ng-model="father" placeholder="Father's Full Name"></td>
+                <td><input type="text" ng-model="mother" placeholder="Mother's First & Maiden Name"></td>
+            </tr>
+        </table>
+        <h3>{{hint}}</h3>
+        <br>
+
+        <script src="mainApp.js"></script>
+        <script src="mainCtrl.js"></script>
+
+    </body>
+</html>
